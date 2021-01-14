@@ -25,10 +25,17 @@ new fullpage('#fullpage',{
 
 document.getElementById('submit').addEventListener('click', async function(e) {
     e.preventDefault();
-    document.getElementById('button-img').style.animation = "plane 10s 1"; 
+    document.getElementById('button-img').style.animation = "plane-return 10s 1"; 
     let name = document.getElementById('name').value;
     let message = document.getElementById('message').value;
     await emailjs.send('service_qrxfy7n','template_clgh61t', {name: name,message: message } ,'user_etepfJ0QfVa5RVKcZWOCb');
     document.getElementById('name').value = "";
     document.getElementById('message').value = "";
 })
+
+new Typed('#typed',{
+    strings : ['Engineer','Investor'],
+    typeSpeed : 80,
+    delaySpeed : 90,
+    loop : true
+});

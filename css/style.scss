@@ -130,6 +130,12 @@ input {
     width: 40%;
 }
 
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
 input::placeholder {
     font-family: $font;
 }
@@ -144,6 +150,30 @@ textarea::placeholder {
         left: 0px;
     }
     to {
+        top: -580px;
+        left: 600px;
+    }
+}
+
+
+@keyframes plane-return {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+    25% {
+        top: -180px;
+        left: 100px;
+    }
+    50% {
+        top: -280px;
+        left: 200px;
+    }
+    75% {
+        top: -420px;
+        left: 400px;
+    }
+    100% {
         top: -580px;
         left: 600px;
     }
