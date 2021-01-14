@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+$background: #000000;
+$text_primary_colour: #ffffff;
+$text_secondary_colour:  #FFEA00;
+$font : 'Kaushan Script', cursive;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: $background;
+    font-family: $font;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: $text_primary_colour ;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 36px;
+}
+
+li {
+    list-style-image: url('/assets/icon.svg');
+    color: $text_primary_colour;
+    font-size: 36px;
+    text-align: justify;
+}
+
+button {
+    margin: 20px auto;
+    border: none;
+    background-color: #000000;
+    outline: none;
+}
+
+button img {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    clip: rect(10px,10px,0px,0px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 36px;
+}
+
+input {
+    height: 40px;
+}
+
+.col {
+    width: 50%;
+}
+
+.img-container img {
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+}
+
+.section {
+    padding: 0 10% 0 10%;
+}
+
+.primary {
+    color: $text_primary_colour;
+}
+
+.secondary {
+    color: $text_secondary_colour;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.flex {
+    display: flex;
+}
+
+.img-container {
+    margin: auto;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.icons-container img {
+    padding: 10px;   
+}
+
+.lists-2 {
+    padding-left: 20px;
+}
+
+.col-7 {
+    width: 60%;
+}
+
+.col-5 {
+    width: 40%;
+}
+
+input::placeholder {
+    font-family: $font;
+}
+
+textarea::placeholder {
+    font-family: $font;
+}
+
+@keyframes plane {
+    from {
+        top: 0px;
+        left: 0px;
+    }
+    to {
+        top: -580px;
+        left: 600px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .flex {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 48px;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 24px;
+    }
+    
+    li {
+        list-style-image: url('/assets/icon.svg');
+        color: $text_primary_colour;
+        font-size: 24px;
+        text-align: justify;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .col-7 {
+        width: 100%;
+    }
+
+    .col-5 {
+        width: 100%;
+    }
+
+    .lists-2 {
+        margin-top: -28px;
+    }
+
+    .img-container img {
+        border-radius: 50%;
+        height: 280px;
+        width: 280px;
+    }
+
+    .m-auto {
+        margin: inherit;
+        margin-top: -25px;
+    }
+
+    form {
+        font-size: 24px;
+    }
+
+    .mt-sm-5 {
+        margin-top: 5%;
+    }
+}

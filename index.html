@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/fullpage.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Ashis Sharma</title>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section">
+            <div class="flex">
+                <div class="main-container col-7">
+                    <h1>Hi there, I am</h1>
+                    <h1 class="secondary">Ashis Sharma</h1>
+                    <h1>I'm an Engineer</h1>
+                </div>
+                <div class="img-container col-5">
+                    <img src="/assets/ashis.webp" alt="Ashis Sharma">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="secondary">About</h2>
+            <h3 class="justify">I am a Full Stack Engineer with experience in Frontend, Backend, and DevOps. I
+                have used so many tools like React, Redux, Angular NodeJS, Docker, Kubernetes, GCP, Azure
+                ,TensorFlowJS, etc just to name a few. I love exploring new things not only in my professional
+                life but personal life too. I am curious to learn more and develop myself each day.</h3>
+        </div>
+        <div class="section">
+            <h2 class="secondary">Skills</h2>
+            <div class="flex">
+                <div class="list-container col">
+                    <div class="lists-1">
+                        <ul>
+                            <li>Java Script</li>
+                            <li>Type Script</li>
+                            <li>React</li>
+                            <li>Redux</li>
+                            <li>Angular</li>
+                            <li>SASS</li>
+                            <li>NodeJS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list-container col">
+                    <div class="lists-2">
+                        <ul>
+                            <li>GCP</li>
+                            <li>Azure</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>Express</li>
+                            <li>TensorFlow JS</li>
+                            <li>Mongo DB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 class="secondary">Experiences</h2>
+            <ul>
+                <li>Worked at Wipro as Test Engineer for 9 Months.</li>
+                <li>Currently working as Full Stack Developer at Jukshio Technology Pvt. Ltd.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 class="secondary">Get in touch</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" placeholder="Enter Name Here" name="name" id="name">
+                <label for="message">Message</label>
+                <textarea name="message" placeholder="Enter Message Here" id="message" cols="30" rows="10"></textarea>
+                <button class="submit" id="submit">
+                    <img id="button-img" src="/assets/send.webp" alt="Submit">
+                </button>
+            </form>
+        </div>
+        <div class="section fp-auto-height m-auto mt-sm-5">
+            <div class="text-center"><h3 class="m-0">Made with <img height="35" width="35" src="/assets/love.webp" alt="love">by,</h3></div>
+            <div class="text-center"><h3 class="secondary m-0">Ashis Sharma</h3></div>
+            <div class="text-center"><h3 class="m-0">Connect with me</h3></div>
+            <div class="text-center icons-container">
+                <a href="https://www.linkedin.com/in/ashis-sharma-856992195/">
+                    <img height="35" width="35" src="/assets/linkedin.webp" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/ashissrma">
+                    <img height="35" width="35" src="/assets/github.webp" alt="GitHub">
+                </a>
+                <a href="mailto:ashisrm9@gmail.com">
+                    <img height="35" width="35" src="/assets/email.webp" alt="Email">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/fullpage.min.js"></script>
+<script src="/js/email.min.js"></script>
+<script>
+    (function() {
+    emailjs.init("user_etepfJ0QfVa5RVKcZWOCb");
+    })();
+</script>
+<script src="/js/scripts.js"></script>
+</html>
