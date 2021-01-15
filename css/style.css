@@ -215,20 +215,26 @@ textarea::placeholder {
     left: 0px;
   }
   25% {
-    top: -180px;
+    top: -80px;
     left: 100px;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
   }
   50% {
-    top: -280px;
-    left: 200px;
+    top: -120px;
+    left: 50px;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
   }
   75% {
-    top: -420px;
-    left: 400px;
+    top: -80px;
+    left: -25px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   100% {
-    top: -580px;
-    left: 600px;
+    top: 0px;
+    left: 0px;
   }
 }
 
@@ -238,20 +244,26 @@ textarea::placeholder {
     left: 0px;
   }
   25% {
-    top: -180px;
+    top: -80px;
     left: 100px;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
   }
   50% {
-    top: -280px;
-    left: 200px;
+    top: -120px;
+    left: 50px;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
   }
   75% {
-    top: -420px;
-    left: 400px;
+    top: -80px;
+    left: -25px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   100% {
-    top: -580px;
-    left: 600px;
+    top: 0px;
+    left: 0px;
   }
 }
 
