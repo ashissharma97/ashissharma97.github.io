@@ -34,7 +34,7 @@ document.getElementById('submit').addEventListener('click', async function(e) {
         }, 11000);
     }
     else {
-        document.getElementById('button-img').style.animation = "plane-return 10s 1"; 
+        document.getElementById('button-img').style.animation = "plane 10s 1"; 
         await emailjs.send('service_qrxfy7n','template_clgh61t', {name: name,message: message } ,'user_etepfJ0QfVa5RVKcZWOCb');
         document.getElementById('name').value = "";
         document.getElementById('message').value = "";
