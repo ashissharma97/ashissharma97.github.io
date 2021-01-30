@@ -42,7 +42,7 @@ document.getElementById('submit').addEventListener('click', async function(e) {
 })
 
 new Typed('#typed',{
-    strings : ['Engineer','Investor'],
+    strings : ['Engineer','Investor','Freelancer'],
     typeSpeed : 80,
     delaySpeed : 90,
     loop : true
