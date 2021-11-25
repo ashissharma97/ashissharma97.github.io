@@ -28,13 +28,13 @@ document.getElementById('submit').addEventListener('click', async function(e) {
     let name = document.getElementById('name').value;
     let message = document.getElementById('message').value;
     if(name === '' || message === '') {
-        document.getElementById('button-img').style.animation = "plane-return 10s 1"; 
+        document.getElementById('button-img').style.animation = "plane-return 10s 1";
         setTimeout(() => {
             alert("Please Enter all the details.")
         }, 11000);
     }
     else {
-        document.getElementById('button-img').style.animation = "plane 10s 1"; 
+        document.getElementById('button-img').style.animation = "plane 10s 1";
         await emailjs.send('service_qrxfy7n','template_clgh61t', {name: name,message: message } ,'user_etepfJ0QfVa5RVKcZWOCb');
         document.getElementById('name').value = "";
         document.getElementById('message').value = "";
@@ -42,7 +42,7 @@ document.getElementById('submit').addEventListener('click', async function(e) {
 })
 
 new Typed('#typed',{
-    strings : ['Engineer','Investor','Freelancer'],
+    strings : ['Engineer'],
     typeSpeed : 80,
     delaySpeed : 90,
     loop : true
