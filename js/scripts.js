@@ -1,4 +1,6 @@
 new fullpage('#fullpage',{
+    anchors: ['landing', 'about', 'skills', 'experience', 'blogs', 'enquiry'],
+    verticalCentered: false,
     onLeave: function(index,nextIndex,direction){
         switch(nextIndex.index){
             case 0:
@@ -14,7 +16,10 @@ new fullpage('#fullpage',{
                 document.title = "Experiences | Ashis Sharma"
                 break;
             case 4:
-                document.title = "Get in touch | Ashis Sharma"
+                document.title = "Blogs | Ashis Sharma"
+                break;
+            case 5:
+                document.title = "Enquiry | Ashis Sharma"
                 break;
             default:
                 document.title = "Ashis Sharma"
@@ -28,14 +33,11 @@ document.getElementById('submit').addEventListener('click', async function(e) {
     let name = document.getElementById('name').value;
     let message = document.getElementById('message').value;
     if(name === '' || message === '') {
-        document.getElementById('button-img').style.animation = "plane-return 10s 1";
-        setTimeout(() => {
-            alert("Please Enter all the details.")
-        }, 11000);
+        alert("Please Enter all the details.")
     }
     else {
         document.getElementById('button-img').style.animation = "plane 10s 1";
-        await emailjs.send('service_qrxfy7n','template_clgh61t', {name: name,message: message } ,'user_etepfJ0QfVa5RVKcZWOCb');
+        await emailjs.send('service_16ayyef','template_48nqu1e', {name: name,message: message } ,'TVJL_f4Vr5Uwg2l-R');
         document.getElementById('name').value = "";
         document.getElementById('message').value = "";
     }
@@ -51,11 +53,28 @@ new Typed('#typed',{
 let mediaFunc = window.matchMedia('(max-width: 600px)');
 
 if (mediaFunc.matches) {
-    document.getElementById('skills-col2').style.display = 'none';
-    const colSkills = ['GCP','Azure','Docker','Kubernetes','PWA','TensorFlow JS','Mongo DB'];
-    for(let i=0;i<colSkills.length;i++){
-        let li = document.createElement('li');
-        li.innerHTML = colSkills[i];
-        document.getElementById('skills-ul').appendChild(li);
-    }
+    document.getElementsByTagName('header')[0].style.display = 'none'
 }
+
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+var requestOptions = {
+    method: "get",
+    headers: myHeaders,
+    redirect: "follow",
+};
+
+(async function getMediumPosts(){
+    const resp = await fetch("https://blogs-function.netlify.app/.netlify/functions/blogs-function", requestOptions)
+    const json = await resp.json()
+    const len = window.matchMedia('(max-width: 600px)').matches ? 2 : 3;
+    for(let i=0; i<len; i++){
+      document.getElementById('index-blogs-section').innerHTML += `<div class="card-container"> <a href="${json[i].link}"> <div class="card-image"><img src="${json[i].image}" alt="a brand new sports car" /> </div> <div class="card-body"><h1> ${json[i].title} </h1> </div> </a> </div>`
+    }
+})()
+
+function goToBlogs() {
+    window.location.href = "/blogs.html";
+}
+
+document.getElementById('all-blogs').onclick = goToBlogs;
