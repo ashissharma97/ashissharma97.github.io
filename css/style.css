@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background: #000000;
@@ -21,10 +22,16 @@ header div a {
   font-size: 28px;
 }
 header div a:hover {
-  color: #FFEA00 !important;
+  color: #ffea00 !important;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   color: #ffffff;
 }
 
@@ -100,7 +107,7 @@ input {
 }
 
 .secondary {
-  color: #FFEA00;
+  color: #ffea00;
 }
 
 .justify {
@@ -279,7 +286,7 @@ textarea::placeholder {
   }
 }
 .fs-60 {
-  font-size: 60px;
+  font-size: 45px;
 }
 
 .card-container {
@@ -329,16 +336,16 @@ textarea::placeholder {
   font-family: "Work Sans", sans-serif;
   touch-callout: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: inline-block;
   border: 0.2em solid;
   position: relative;
   cursor: pointer;
   overflow: hidden;
   opacity: 0.6;
-  color: #FFF;
+  color: #fff;
 }
 .button__text {
   display: block;
@@ -376,15 +383,15 @@ textarea::placeholder {
 }
 .button:hover .button__text {
   -webkit-animation: fx-text 0.3s ease-out;
-          animation: fx-text 0.3s ease-out;
+  animation: fx-text 0.3s ease-out;
 }
 .button:hover .button__text--bis {
   -webkit-animation: fx-text-bis 0.3s ease-out;
-          animation: fx-text-bis 0.3s ease-out;
+  animation: fx-text-bis 0.3s ease-out;
 }
 .button:hover .button__mask {
   -webkit-animation: fx-mask 0.3s ease-out;
-          animation: fx-mask 0.3s ease-out;
+  animation: fx-mask 0.3s ease-out;
 }
 
 .button:active {
@@ -449,4 +456,4 @@ textarea::placeholder {
     transform: translateX(0);
     opacity: 1;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
