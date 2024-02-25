@@ -2,11 +2,13 @@
 
 $background: #000000;
 $text_primary_colour: #ffffff;
-$text_secondary_colour:  #FFEA00;
-$font : 'Kaushan Script', cursive;
+$text_secondary_colour: #FFEA00;
+$font : 'Kaushan Script',
+cursive;
 $anim-text-offset: 1em;
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     background: $background;
@@ -15,23 +17,32 @@ html, body {
 
 header {
     position: fixed;
-	background: inherit;
-	width: 100%;
+    background: inherit;
+    width: 100%;
     font-family: $font;
     margin: 2% 0 0 40%;
+
     div {
         padding: 2%;
+
         a {
             color: $text_primary_colour;
             font-size: 28px;
         }
-        a:hover{
+
+        a:hover {
             color: $text_secondary_colour !important;
         }
     }
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     color: $text_primary_colour ;
 }
 
@@ -73,7 +84,7 @@ button img {
     position: relative;
     width: 100px;
     height: 60px;
-    clip: rect(10px,10px,0px,0px);
+    clip: rect(10px, 10px, 0px, 0px);
     margin-top: 25%;
 }
 
@@ -150,10 +161,18 @@ input {
     width: 40%;
 }
 
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 input::placeholder {
@@ -169,6 +188,7 @@ textarea::placeholder {
         top: 0px;
         left: 0px;
     }
+
     to {
         top: -580px;
         left: 600px;
@@ -180,6 +200,7 @@ textarea::placeholder {
     .flex {
         flex-direction: column;
     }
+
     h1 {
         font-size: 48px;
         text-align: center;
@@ -226,12 +247,12 @@ textarea::placeholder {
         width: 180px;
         background-color: #fff;
         border-radius: 8px;
-        box-shadow: 0 2px 20px rgba(0,0,0, 0.1);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         font-family: 'Roboto', sans-serif;
         flex: 0 0 27%;
         margin: 2%;
-      }
+    }
 
     .img-container img {
         border-radius: 50%;
@@ -251,6 +272,7 @@ textarea::placeholder {
     .mt-sm-12 {
         margin-top: 12%;
     }
+
     .flex-col {
         flex-direction: column;
     }
@@ -261,7 +283,7 @@ textarea::placeholder {
 }
 
 .fs-60 {
-    font-size: 60px;
+    font-size: 80px;
 }
 
 
@@ -270,46 +292,46 @@ textarea::placeholder {
     width: 300px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 20px rgba(0,0,0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     flex: 0 0 27%;
     margin: 2%;
-  }
+}
 
-  .card-image img {
+.card-image img {
     height: 220px;
     width: 100%;
     border-radius: 8px 8px 0 0;
     background-size: cover;
-  }
+}
 
-  .card-body {
+.card-body {
     display: flex;
     flex-direction: column;
     align-items: start;
     padding: 16px;
-  }
+}
 
-  .card-body h1 {
+.card-body h1 {
     color: $background;
     font-size: 16px;
     margin: 8px 0;
-  }
+}
 
-  .card-body p {
+.card-body p {
     color: $background;
     font-size: 14px;
     margin: 8px 0 16px 0;
-  }
+}
 
-  @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .container {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  }
+}
 
-  .button{
+.button {
     font-family: 'Work Sans', sans-serif;
     touch-callout: none;
     user-select: none;
@@ -320,79 +342,96 @@ textarea::placeholder {
     overflow: hidden;
     opacity: 0.6;
     color: #FFF;
-    &__text{
-      display: block;
-      padding:1em 2em;
-      text-transform: uppercase;
-      font-weight: bold;
-      &:before{
-        content: attr(title);
-      }
-      &--bis{
+
+    &__text {
+        display: block;
+        padding: 1em 2em;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        &:before {
+            content: attr(title);
+        }
+
+        &--bis {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: translateX(-1 * $anim-text-offset);
+            opacity: 0;
+        }
+    }
+
+    &__mask {
         display: block;
         position: absolute;
-        top: 0; left:0; right: 0; bottom: 0;
-        transform: translateX(-1 * $anim-text-offset);
-        opacity: 0;
-      }
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        transform: translateX(-100%) rotate(45deg);
+        transition: all 0.3s;
     }
-    &__mask{
-      display: block;
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: white;
-      transform: translateX(-100%) rotate(45deg);
-      transition: all 0.3s;
-    }
-  }
+}
 
-  .button:hover{
+.button:hover {
     opacity: 1;
-    .button__text{
-      animation: fx-text .3s ease-out;
-      &--bis{
-        animation: fx-text-bis .3s ease-out;
-      }
-    }
-    .button__mask{
-      animation: fx-mask .3s ease-out;
-    }
-  }
 
-  .button:active{
+    .button__text {
+        animation: fx-text .3s ease-out;
+
+        &--bis {
+            animation: fx-text-bis .3s ease-out;
+        }
+    }
+
+    .button__mask {
+        animation: fx-mask .3s ease-out;
+    }
+}
+
+.button:active {
     opacity: 1;
     background: white;
     color: inherit;
-  }
+}
 
 
 
-  @keyframes fx-mask {
-    0%{
-      transform: translateX(-100%) rotate(45deg);
+@keyframes fx-mask {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
     }
-    100%{
-      transform: translateX(100%) rotate(45deg);
-    }
-  }
 
-  @keyframes fx-text {
-    0%{
-      transform: translateX(0);
-      opacity: 1;
+    100% {
+        transform: translateX(100%) rotate(45deg);
     }
-    100%{
-      transform: translateX($anim-text-offset);
-      opacity: 0;
+}
+
+@keyframes fx-text {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-  @keyframes fx-text-bis {
-    0%{
-      transform: translateX(-1 * $anim-text-offset);
-      opacity: 0;
+
+    100% {
+        transform: translateX($anim-text-offset);
+        opacity: 0;
     }
-    100%{
-      transform: translateX(0);
-      opacity: 1;
+}
+
+@keyframes fx-text-bis {
+    0% {
+        transform: translateX(-1 * $anim-text-offset);
+        opacity: 0;
     }
-  }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
