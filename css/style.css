@@ -1,18 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 html,
 body {
   margin: 0;
   padding: 0;
   background: #000000;
-  font-family: "Kaushan Script", cursive;
+  font-family: "Source Code Pro", monospace;
 }
 
 header {
   position: fixed;
   background: inherit;
   width: 100%;
-  font-family: "Kaushan Script", cursive;
-  margin: 2% 0 0 40%;
+  font-family: "Source Code Pro", monospace;
+  margin: 2% 0 0 25%;
 }
 header div {
   padding: 2%;
@@ -174,25 +173,25 @@ input {
   }
 }
 input::-moz-placeholder {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Source Code Pro", monospace;
 }
 input:-ms-input-placeholder {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Source Code Pro", monospace;
 }
 input::placeholder {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Source Code Pro", monospace;
 }
 
 textarea::-moz-placeholder {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Source Code Pro", monospace;
 }
 
 textarea:-ms-input-placeholder {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Source Code Pro", monospace;
 }
 
 textarea::placeholder {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Source Code Pro", monospace;
 }
 
 @-webkit-keyframes plane {
@@ -334,7 +333,6 @@ textarea::placeholder {
 }
 .button {
   font-family: "Work Sans", sans-serif;
-  touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -455,5 +453,21 @@ textarea::placeholder {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fs-60 {
+    font-size: 36px;
+  }
+
+  .section {
+    margin: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fs-60 {
+    font-size: 28px;
   }
 } /*# sourceMappingURL=style.css.map */

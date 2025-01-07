@@ -1,5 +1,5 @@
 new fullpage("#fullpage", {
-  anchors: ["landing", "about", "skills", "experience", "blogs", "enquiry"],
+  anchors: ["landing", "about", "skills", "experience", "blogs", "contact"],
   verticalCentered: false,
   onLeave: function (index, nextIndex, direction) {
     switch (nextIndex.index) {
@@ -19,7 +19,7 @@ new fullpage("#fullpage", {
         document.title = "Blogs | Ashis Sharma";
         break;
       case 5:
-        document.title = "Enquiry | Ashis Sharma";
+        document.title = "Contact | Ashis Sharma";
         break;
       default:
         document.title = "Ashis Sharma";
