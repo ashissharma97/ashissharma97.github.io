@@ -383,35 +383,235 @@ body {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .terminal-body {
+    padding: 15px;
+  }
+
   .ascii-art {
-    font-size: 8px;
+    font-size: 9px;
   }
+}
 
-  .skills-list {
-    grid-template-columns: 1fr;
-  }
-
+@media (max-width: 768px) {
   .terminal-body {
     padding: 10px;
+    font-size: 13px;
+  }
+
+  .ascii-art {
+    font-size: 7px;
+    line-height: 0.9;
   }
 
   .typing-text {
     font-size: 16px;
+    margin: 15px 0;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .terminal-header {
+    height: 35px;
+    padding: 0 15px;
+  }
+
+  .terminal-title {
+    font-size: 11px;
+  }
+
+  .form-input,
+  .form-textarea,
+  .email-input {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .experience-item,
+  .blog-item {
+    margin: 10px 0;
+    padding: 8px;
+  }
+
+  .section-content {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* Better touch targets */
+  .form-button,
+  .download-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  .social-link {
+    display: block;
+    margin: 10px 0;
+    padding: 8px 0;
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .terminal-body {
+    padding: 8px;
+  }
+
   .ascii-art {
-    font-size: 6px;
+    font-size: 5px;
+    line-height: 0.8;
   }
 
   .typing-text {
     font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .terminal-header {
+    height: 30px;
+    padding: 0 10px;
+  }
+
+  .terminal-title {
+    font-size: 10px;
+  }
+
+  .btn {
+    width: 10px;
+    height: 10px;
+  }
+
+  .terminal-buttons {
+    gap: 6px;
+  }
+
+  .boot-line,
+  .help-menu,
+  .section-content {
+    font-size: 12px;
+  }
+
+  .prompt {
+    font-size: 12px;
+  }
+
+  .terminal-input {
+    font-size: 14px;
+  }
+
+  /* Improve readability on small screens */
+  .experience-item,
+  .blog-item {
+    margin: 8px 0;
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .form-input,
+  .form-textarea,
+  .email-input {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* Stack form elements vertically */
+  .resume-download {
+    padding: 15px 10px;
+  }
+
+  .download-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .ascii-art {
+    font-size: 4px;
+    line-height: 0.7;
+  }
+
+  .typing-text {
+    font-size: 12px;
   }
 
   .terminal-body {
     padding: 5px;
+  }
+
+  .section-content,
+  .boot-line,
+  .help-menu {
+    font-size: 11px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .terminal-body {
+    padding: 5px 10px;
+  }
+
+  .ascii-art {
+    font-size: 6px;
+    margin-bottom: 10px;
+  }
+
+  .typing-text {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .boot-sequence {
+    margin-bottom: 10px;
+  }
+
+  .command-section {
+    margin: 10px 0;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .ascii-art {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  /* Already dark by default, but ensure consistency */
+  body {
+    background: #0a0a0a;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .boot-line,
+  .welcome-section,
+  .command-section,
+  .input-section {
+    animation: none;
+    opacity: 1;
+  }
+
+  .cursor {
+    animation: none;
+  }
+
+  #typed-cursor {
+    animation: none;
   }
 }
 

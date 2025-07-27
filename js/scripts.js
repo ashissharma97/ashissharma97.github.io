@@ -27,7 +27,11 @@ class Terminal {
 
   init() {
     this.input.addEventListener("keydown", this.handleKeyDown.bind(this));
-    this.input.focus();
+
+    // Mobile-friendly focus handling
+    if (!this.isMobile()) {
+      this.input.focus();
+    }
 
     // Focus input when clicking anywhere in terminal, but not on form inputs
     document.addEventListener("click", (event) => {
@@ -41,11 +45,75 @@ class Terminal {
       ) {
         return;
       }
-      this.input.focus();
+
+      // Only auto-focus on non-mobile devices
+      if (!this.isMobile()) {
+        this.input.focus();
+      }
     });
+
+    // Handle mobile viewport changes
+    this.handleViewportChanges();
 
     // Load blogs data
     this.loadBlogs();
+
+    // Add accessibility improvements
+    this.setupAccessibility();
+  }
+
+  isMobile() {
+    return (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      ) || window.innerWidth <= 768
+    );
+  }
+
+  handleViewportChanges() {
+    // Handle orientation changes on mobile
+    window.addEventListener("orientationchange", () => {
+      setTimeout(() => {
+        this.scrollToBottom();
+      }, 100);
+    });
+
+    // Handle resize events
+    window.addEventListener("resize", () => {
+      this.scrollToBottom();
+    });
+  }
+
+  setupAccessibility() {
+    // Add ARIA labels and roles
+    this.input.setAttribute("aria-label", "Terminal command input");
+    this.input.setAttribute("role", "textbox");
+    this.interactiveTerminal.setAttribute("role", "log");
+    this.interactiveTerminal.setAttribute("aria-live", "polite");
+
+    // Add skip link for screen readers
+    const skipLink = document.createElement("a");
+    skipLink.href = "#terminal-input";
+    skipLink.textContent = "Skip to terminal input";
+    skipLink.className = "skip-link";
+    skipLink.style.cssText = `
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #00ff00;
+      color: #000;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 1000;
+      border-radius: 4px;
+    `;
+    skipLink.addEventListener("focus", () => {
+      skipLink.style.top = "6px";
+    });
+    skipLink.addEventListener("blur", () => {
+      skipLink.style.top = "-40px";
+    });
+    document.body.insertBefore(skipLink, document.body.firstChild);
   }
 
   handleKeyDown(event) {

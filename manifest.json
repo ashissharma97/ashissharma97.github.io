@@ -1,0 +1,24 @@
+{
+  "name": "Ashis Sharma - DevOps Engineer Portfolio",
+  "short_name": "Ashis Sharma",
+  "description": "DevOps Engineer & Cloud Enthusiast. Expert in Kubernetes, Docker, GCP, Azure, Terraform, and CI/CD.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00ff00",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["portfolio", "technology", "devops"],
+  "lang": "en"
+}
