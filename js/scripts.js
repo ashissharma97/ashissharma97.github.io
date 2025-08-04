@@ -30,12 +30,13 @@ class Terminal {
     // Command descriptions for better auto-suggestions
     this.commandDescriptions = {
       help: "Display available commands",
-      about: "Show information about Ashis",
-      skills: "List technical skills",
-      experience: "Show work experience",
-      blogs: "View recent blog posts",
-      contact: "Get contact information",
-      resume: "Download resume",
+      about:
+        "Show information about Ashis (DevOps & AI Infrastructure Engineer)",
+      skills: "List technical skills including AI/ML and cloud expertise",
+      experience: "Show 4+ years of work experience in DevOps and AI",
+      blogs: "View recent technical blog posts",
+      contact: "Get contact information and social profiles",
+      resume: "Download latest resume (PDF)",
       clear: "Clear terminal screen",
       exit: "Close terminal",
       ls: "List directory contents",
@@ -291,7 +292,6 @@ class Terminal {
   <span style="color: #888;">Tips:</span><br>
   • Use <strong>Tab</strong> for command completion<br>
   • Use <strong>↑/↓</strong> arrows for command history<br>
-  • Type any command to see auto-suggestions<br>
   • Press <strong>Escape</strong> to hide suggestions
 </div>`;
     this.addOutput(helpText);
@@ -301,24 +301,29 @@ class Terminal {
     const aboutText = `
 <div class="section-content">
 <pre>NAME:        Ashis Sharma
-ROLE:        DevOps Engineer
-COMPANY:     Jukshio Technology Pvt. Ltd.
+ROLE:        DevOps and AI Infrastructure Engineer
+COMPANY:     Jukshio
+LOCATION:    Hyderabad, India
+EXPERIENCE:  4+ years
 STATUS:      Currently Active
 
 DESCRIPTION:
-My love for technology and Cloud Services runs deep, and I find my greatest joy in
-getting my hands dirty with hands-on work. With a strong technical background, I enjoy
-nothing more than coming up with creative solutions that truly resonate with my clients.
+DevOps and AI Infrastructure Engineer with 4+ years of experience deploying large-scale
+LLMs and building scalable CI/CD and MLOps pipelines. Proven success in optimizing cloud
+workloads, orchestrating high-performance GPU clusters, and automating secure DevSecOps
+pipelines in production environments.
 
-I take pride in my ability to deliver results even under tight deadlines, all while
-working closely with my clients to ensure their visions are brought to life in the
-best possible way.
+EDUCATION:
+Bachelor of Science: Information Technology
+SRM University Sikkim, Gangtok (May 2019)
 
 SPECIALTIES:
-  • Technology & Cloud Services
-  • Creative Problem Solving
-  • Client-focused Solutions
-  • Results-driven Approach</pre>
+  • Large-scale Deep Learning Training & Deployment Setup
+  • High-performance GPU Cluster Management
+  • MLOps Pipeline Development
+  • Cloud Migration & Optimization
+  • DevSecOps Implementation
+  • Kubernetes & Container Orchestration</pre>
 </div>`;
     this.addOutput(aboutText);
   }
@@ -328,11 +333,27 @@ SPECIALTIES:
 <div class="section-content">
 <pre>TECHNICAL SKILLS:
 
-[01] Kubernetes              [06] Golang
-[02] Docker                  [07] Gitlab CI/CD
-[03] Google Cloud Platform   [08] Node.js
-[04] Microsoft Azure         [09] Linux
-[05] Terraform               [10] Git</pre>
+Cloud Platforms:
+[01] Google Cloud Platform   [02] Microsoft Azure
+
+Containers & Orchestration:
+[03] Docker                  [04] Kubernetes
+[05] Slurm                   [06] K3s
+
+Programming Languages:
+[07] Golang                  [08] Python
+[09] Bash Scripting
+
+CI/CD & Infrastructure:
+[10] GitLab CI/CD            [11] GitHub Actions
+[12] Terraform
+
+Monitoring & Security:
+[13] Prometheus              [14] Grafana
+[15] EFK Stack               [16] DevSecOps tools
+
+HPC & AI Tools:
+[17] CUDA Programming        [18] GCP Vertex AI
 </div>`;
     this.addOutput(skillsText);
   }
@@ -341,32 +362,40 @@ SPECIALTIES:
     const experienceText = `
 <div class="section-content">
 <pre>[01] DevOps Engineer
-     Company:     Jukshio Technology Pvt. Ltd.
-     Duration:    2023 - Present (Current Position)
+     Company:     Jukshio
+     Duration:    June 2020 - Present (4+ years)
+     Location:    Hyderabad, India
 
-     Key Responsibilities:
-     • Designed and implemented cloud infrastructure on GCP and Azure
-     • Built and maintained CI/CD pipelines using GitLab CI/CD
-     • Managed Kubernetes clusters for containerized applications
-     • Automated deployment processes using Terraform and Infrastructure as Code
-     • Monitored system performance and implemented logging solutions
-     • Collaborated with development teams to optimize application deployment
-     • Implemented security best practices for cloud environments
-     • Reduced deployment time by 60% through automation initiatives
+     Key Achievements:
+     • Trained and deployed ultra-large LLMs including DeepSeek R1/V1-671B and
+       LLaMA 3 405B across distributed HPC GPU clusters with ~160 NVIDIA GPUs Cluster.
+     • Designed high-throughput inference pipelines for large models, optimizing
+       latency and throughput in GPU-based distributed systems
+     • Benchmarked and profiled model performance across multi-node environments,
+       improving training/inference efficiency by over 20%
+     • Developed scalable Kubernetes cluster deployment for Raspberry Pi devices,
+       enabling remote IoT updates and resilient edge computing
+     • Led cloud migration from Microsoft Azure to Google Cloud Platform (GCP),
+       optimizing resource allocation and reducing infrastructure overhead
+     • Developed DevSecOps pipeline for high-security web applications with static
+       code analysis, DAST, dependency scanning, and infrastructure security testing
+     • Created scalable CI/CD pipelines using GitLab CI and Terraform, reducing
+       deployment cycles by 60%.
+     • Built Kubeflow-based pipeline for deep learning model training with
+       TensorFlow and PyTorch.
+     • Developed SDKs for enterprise clients including Jio and HDFC Bank.
+     • Created internal tools using React and Node.js for operational efficiency.
 
 [02] Test Engineer
      Company:     Wipro
-     Duration:    2022 - 2023 (9 Months)
+     Duration:    August 2019 - March 2020 (8 months)
+     Location:    Chennai, India
 
      Key Responsibilities:
-     • Developed comprehensive test plans and test cases for web applications
-     • Performed manual and automated testing using various testing frameworks
-     • Identified, documented, and tracked software defects through resolution
-     • Collaborated with development teams to ensure quality deliverables
-     • Conducted regression testing and user acceptance testing
-     • Created detailed test reports and documentation
-     • Participated in agile development processes and sprint planning
-     • Improved testing efficiency by implementing automated test scripts</pre>
+     • Designed and maintained automated test scripts using Selenium WebDriver in Java
+     • Executed test cases on mainframe systems and extracted logs from transaction programs
+     • Developed Java-based utilities to parse data and generate Excel reports
+     • Collaborated with development teams to ensure quality deliverables</pre>
 </div>`;
     this.addOutput(experienceText);
   }
@@ -417,17 +446,19 @@ SPECIALTIES:
 <pre>CONTACT INFORMATION:
 Click on the links below to visit my profiles:
 
+Email:         <a href="mailto:ashissharma@outlook.com" class="social-link">ashissharma@outlook.com</a>
+  └─ Click to send me an email directly
+
 LinkedIn:      <a href="https://www.linkedin.com/in/ashissharma/" target="_blank" class="social-link">https://www.linkedin.com/in/ashissharma/</a>
   └─ Click to view professional profile and connect
 
 GitHub:        <a href="https://github.com/ashissharma97" target="_blank" class="social-link">https://github.com/ashissharma97</a>
   └─ Click to explore my code repositories and projects
 
-Email:         <a href="mailto:ashissharma@outlook.com" class="social-link">ashissharma@outlook.com</a>
-  └─ Click to send me an email directly
+Medium:        <a href="https://medium.com/@ashisrm" target="_blank" class="social-link">https://medium.com/@ashisrm</a>
+  └─ Click to read my technical articles and insights
 
-StackOverflow: <a href="https://stackoverflow.com/users/10069184/ashis" target="_blank" class="social-link">https://stackoverflow.com/users/10069184/ashis</a>
-  └─ Click to view my contributions and Q&A activity</pre>
+Location:      Hyderabad, India 500039</pre>
 </div>`;
     this.addOutput(contactText);
   }
@@ -469,7 +500,7 @@ StackOverflow: <a href="https://stackoverflow.com/users/10069184/ashis" target="
       return;
     }
 
-    // Show progress bar for download simulation
+    // Show progress bar for download
     statusDiv.innerHTML =
       '<div class="section-content" style="color: #ffff00;">Preparing download...</div>';
 
@@ -485,23 +516,26 @@ StackOverflow: <a href="https://stackoverflow.com/users/10069184/ashis" target="
         clearInterval(progressInterval);
         progressBar.complete();
 
-        // Create a dummy PDF download (you would replace this with actual resume file)
+        // Create actual PDF download
         const link = document.createElement("a");
-        link.href = "#"; // Replace with actual resume PDF path
+        link.href = "./Ashis_Sharma_Resume.pdf"; // Path to the actual resume PDF
         link.download = "Ashis_Sharma_Resume.pdf";
+        link.style.display = "none";
+
+        // Add to DOM, click, and remove
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
 
         // Log the email for analytics (in real implementation, you'd send this to your backend)
         console.log("Resume downloaded by:", email);
 
         setTimeout(() => {
           statusDiv.innerHTML =
-            '<div class="success-message">Resume download completed! Check your downloads folder.</div>';
+            '<div class="success-message">Resume download started! Check your downloads folder.</div>';
 
-          // For demo purposes, show a message
-          setTimeout(() => {
-            statusDiv.innerHTML +=
-              '<div class="section-content" style="color: #888; font-size: 12px;">Note: This is a demo. In production, the actual resume file would be downloaded.</div>';
-          }, 1000);
+          // Clear the email input after successful download
+          emailInput.value = "";
         }, 500);
       } else {
         progressBar.update(Math.floor(progress));
