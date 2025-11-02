@@ -304,26 +304,27 @@ class Terminal {
 ROLE:        DevOps and AI Infrastructure Engineer
 COMPANY:     Jukshio
 LOCATION:    Hyderabad, India
-EXPERIENCE:  4+ years
+EXPERIENCE:  5+ years
 STATUS:      Currently Active
 
 DESCRIPTION:
-DevOps and AI Infrastructure Engineer with 4+ years of experience deploying large-scale
-LLMs and building scalable CI/CD and MLOps pipelines. Proven success in optimizing cloud
-workloads, orchestrating high-performance GPU clusters, and automating secure DevSecOps
-pipelines in production environments.
+DevOps & AI Infrastructure Engineer with 5+ years' experience scaling GPU-based LLM training 
+clusters (100+ GPUs) and automating multi-cloud MLOps pipelines across GCP and Azure. Proven 
+success reducing deployment times by 60% and optimizing GPU utilization through Terraform, 
+Helm, and Kubeflow. Passionate about building scalable AI infrastructure that bridges model 
+research and production reliability.
 
 EDUCATION:
 Bachelor of Science: Information Technology
-SRM University Sikkim, Gangtok (May 2019)
+SRM University Sikkim, Gangtok (2019)
 
 SPECIALTIES:
-  • Large-scale Deep Learning Training & Deployment Setup
-  • High-performance GPU Cluster Management
-  • MLOps Pipeline Development
-  • Cloud Migration & Optimization
-  • DevSecOps Implementation
-  • Kubernetes & Container Orchestration</pre>
+  • Large-scale GPU-based LLM Training & Deployment
+  • High-performance GPU Cluster Management (100+ GPUs)
+  • Multi-cloud MLOps Pipeline Development
+  • Infrastructure as Code with Terraform & Kubernetes
+  • DevSecOps Implementation & Security Automation
+  • Monitoring & Observability (Prometheus, Grafana)</pre>
 </div>`;
     this.addOutput(aboutText);
   }
@@ -333,27 +334,33 @@ SPECIALTIES:
 <div class="section-content">
 <pre>TECHNICAL SKILLS:
 
-Cloud Platforms:
-[01] Google Cloud Platform   [02] Microsoft Azure
+Cloud & Infrastructure:
+[01] Google Cloud Platform (GCP)   [02] Microsoft Azure
+[03] Terraform
 
 Containers & Orchestration:
-[03] Docker                  [04] Kubernetes
-[05] Slurm                   [06] K3s
+[04] Kubernetes                  [05] Docker
+[06] Helm                       [07] Kustomize
+[08] K3s                        [09] Slurm
 
 Programming Languages:
-[07] Golang                  [08] Python
-[09] Bash Scripting
+[10] Golang                     [11] Python
+[12] JavaScript                 [13] Bash Scripting
 
-CI/CD & Infrastructure:
-[10] GitLab CI/CD            [11] GitHub Actions
-[12] Terraform
+CI/CD & Automation:
+[14] GitLab CI/CD               [15] GitHub Actions
+[16] Multi-stage Pipelines
 
 Monitoring & Security:
-[13] Prometheus              [14] Grafana
-[15] EFK Stack               [16] DevSecOps tools
+[17] Prometheus                 [18] Grafana
+[19] Loki                       [20] EFK Stack
+[21] Trivy                      [22] SonarQube
+[23] WAF                        [24] OWASP Rules
 
-HPC & AI Tools:
-[17] CUDA Programming        [18] GCP Vertex AI
+AI & HPC:
+[25] CUDA Programming           [26] TensorRT
+[27] vLLM                       [28] SGLang
+[29] Kubeflow
 </div>`;
     this.addOutput(skillsText);
   }
@@ -363,28 +370,29 @@ HPC & AI Tools:
 <div class="section-content">
 <pre>[01] DevOps Engineer
      Company:     Jukshio
-     Duration:    June 2020 - Present (4+ years)
+     Duration:    June 2020 - Present (5+ years)
      Location:    Hyderabad, India
 
      Key Achievements:
-     • Trained and deployed ultra-large LLMs including DeepSeek R1/V1-671B and
-       LLaMA 3 405B across distributed HPC GPU clusters with ~160 NVIDIA GPUs Cluster.
-     • Designed high-throughput inference pipelines for large models, optimizing
-       latency and throughput in GPU-based distributed systems
-     • Benchmarked and profiled model performance across multi-node environments,
-       improving training/inference efficiency by over 20%
-     • Developed scalable Kubernetes cluster deployment for Raspberry Pi devices,
-       enabling remote IoT updates and resilient edge computing
-     • Led cloud migration from Microsoft Azure to Google Cloud Platform (GCP),
-       optimizing resource allocation and reducing infrastructure overhead
-     • Developed DevSecOps pipeline for high-security web applications with static
-       code analysis, DAST, dependency scanning, and infrastructure security testing
-     • Created scalable CI/CD pipelines using GitLab CI and Terraform, reducing
-       deployment cycles by 60%.
-     • Built Kubeflow-based pipeline for deep learning model training with
-       TensorFlow and PyTorch.
-     • Developed SDKs for enterprise clients including Jio and HDFC Bank.
-     • Created internal tools using React and Node.js for operational efficiency.
+     • Configured and optimized Slurm-based GPU clusters for large-scale LLM fine-tuning (100+ GPUs).
+     • Deployed scalable Kubernetes inference services using SGLang and vLLM, improving 
+       latency and throughput for customer workloads.
+     • Automated infrastructure provisioning with Terraform, Helm, and Kustomize, 
+       reducing setup time by 40%.
+     • Designed multi-stage CI/CD pipelines (build, test, security scan, deployment) 
+       in GitLab CI, cutting release cycles by 60%.
+     • Implemented DevSecOps practices with SonarQube, Trivy, and OWASP WAF, 
+       enhancing compliance and security posture.
+     • Built and automated Kubeflow-based MLOps pipeline supporting 20+ model training 
+       jobs across GPU clusters.
+     • Managed Prometheus and Grafana observability stack; reduced time-to-detect 
+       incidents by 40%.
+     • Migrated workloads from Azure to GCP, improving reliability and reducing 
+       cloud costs by 25%.
+     • Developed SDKs for enterprise clients (Jio, HDFC Bank), streamlining 
+       integration workflows.
+     • Created internal dashboards in React + Node.js to automate reporting and 
+       enhance productivity.
 
 [02] Test Engineer
      Company:     Wipro
@@ -392,10 +400,8 @@ HPC & AI Tools:
      Location:    Chennai, India
 
      Key Responsibilities:
-     • Designed and maintained automated test scripts using Selenium WebDriver in Java
-     • Executed test cases on mainframe systems and extracted logs from transaction programs
-     • Developed Java-based utilities to parse data and generate Excel reports
-     • Collaborated with development teams to ensure quality deliverables</pre>
+     • Automated regression testing with Selenium WebDriver (Java) and built data 
+       validation utilities to accelerate QA cycles.</pre>
 </div>`;
     this.addOutput(experienceText);
   }
@@ -653,8 +659,12 @@ Location:      Hyderabad, India 500039</pre>
 
     // Position suggestions below input
     const inputRect = this.input.getBoundingClientRect();
-    this.suggestionsContainer.style.top = `${inputRect.bottom + 5}px`;
-    this.suggestionsContainer.style.left = `${inputRect.left}px`;
+    // Calculate position relative to document for proper absolute positioning
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    
+    this.suggestionsContainer.style.top = `${inputRect.top + scrollTop + inputRect.height + 5}px`;
+    this.suggestionsContainer.style.left = `${inputRect.left + scrollLeft}px`;
     this.suggestionsContainer.style.width = `${inputRect.width}px`;
 
     // Add click handlers
